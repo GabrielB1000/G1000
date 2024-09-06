@@ -1,0 +1,12 @@
+div > p {
+    color:rebeccapurple
+}
+/* afeta todos as tags p diretamente dentro da tag div, sendo tags filhas */
+.fundo-azul > p {
+    background: lightblue;
+}
+/* afeta todas as tags p diretamente dentro da classe fundo-azul */
+.fundo-verde > p {
+    background: lightgreen;
+}
+/* afeta todas as tags p diretamente dentro da classe fundo-verde */

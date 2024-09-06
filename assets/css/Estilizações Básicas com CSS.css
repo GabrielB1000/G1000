@@ -1,0 +1,84 @@
+#pre-definidas {
+    color:purple
+}
+
+li {
+    background: aqua;
+}
+
+#current-color {
+    color: white;
+    background-color: transparent;
+    border: 2px solid currentColor;
+}
+/* transparent faz com que a cor do background da pagina em si seja respeitado */
+/* currentColor utiliza a cor já estabelecida no elemento */
+body {
+    background: lightcoral
+}
+
+#rgb {
+    color: rgb(50, 150, 80);
+}
+/* porcentagem pode ser utilizada nos numeros de cada tonalidade, porém é raro */
+
+#rgba {
+    color: rgba(200, 0, 30, .9)
+}
+
+#hex {
+    color: #000000;
+}
+/* 000000 é o valor mais baixo, preto, e FFFFFF é o mais alto, branco */
+/* para ambos, utilizar somente os três primeiros digitos é o suficiente */
+/* os dois primeiros digitos são vermelhos, terceiro e quarto verdes, quinto e sextos azuis */
+/* para adicionar transparência basta somente adicionar mais dois digitos no final, 00 sendo transparente e FF sem transparência */
+
+#hsl {
+    color: hsl(270, 100%, 50%, .8);
+}
+/* h, o primeiro valor, é o ton da cor, s, o segundo valor, é a saturação, intensidade da cor, e l, o terceiro valor, é a leveza da cor, sendo clara ou escura */
+/* transparencia pode ser adicionado como seria usada com rgb */
+
+div {
+    width: 200px;
+    height: 300px;
+    border: 5px solid blue;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+ /* object-fit define como o objeto,neste caso o elemento img, deve se comportar para atender as proporções definidas pelo elemento pai*/
+ /* fill dá o comando de preencher as dimensões do objeto */
+#contain {
+    object-fit: contain;
+}
+/* contain mantém a proporção da imagem, sendo redimensionada para caber dentro da altura e largura do elemento sem distorce-la */
+#cover {
+    object-fit: cover;
+}
+/* cover faz com que a imagem preencha todo o espaço do container, mesmo que acabe cortando a própria */
+#none {
+    object-fit: none;
+}
+/* none ignora totalmente a altura e largura do elemento pai */
+#scale-down {
+    object-fit: scale-down;
+}
+/* scale-down exibe a imagem na configuração contain ou none, automaticamente escolhendo a que resultaria em uma imagem menor */
+#exemplo-2 {
+    width: 500px;
+    /* background-color: palevioletred; */
+    /* background-image: linear-gradient(lightpink, palevioletred); */
+    /* background-image: radial-gradient(lightpink, palevioletred); */
+    background-image: repeating-linear-gradient(to top,lightpink 0 20px, palevioletred 20px 40px);
+}
+#bg-cover {
+    background-image: url(/assets/images/mika3.jpg);
+    width: 300px;
+    /* background-size: auto; */
+    /* auto é a configuração padrão de background-size, */
+    background-size: cover;
+}

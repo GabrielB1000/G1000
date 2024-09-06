@@ -1,0 +1,63 @@
+h1 {
+    background: darkblue;
+    color: lightgreen;
+}
+/* afeta a tag h1 */
+div {
+    background: lightblue;
+}
+/* afeta a tag div */
+li {
+    color: darkblue;
+}
+/* afeta a tag li */
+#explicacao-seletores {
+    background: red;
+    color: white;
+}
+/* afeta a id explicacao-seletores */
+.seletores-mais-comuns {
+    color: red;
+}
+/* afeta a classe seletores-mais-comuns */
+.texto-maiusculo {
+    text-transform: uppercase;
+}
+/* afeta a classe texto-maiusculo */
+* {
+    font-weight: bold;
+}
+/* afeta todos os elementos na pagina */
+[title~="Streaming"] {
+    background: red;
+
+}
+/* ~= pesquisa e aplica ao atributo, neste caso title, se ele tiver somente a palavra Streaming ou se ela for parte do titulo e estiver intacta */
+
+[title|="Streaming"] {
+    color: pink
+}
+/* |= busca ou o valor exato ou o valor seguido por um hífen, nest caso Streaming ou Streaming-algo */
+
+[title="Spotify"] {
+    color: green
+}
+
+[title="Prime"] {
+    color: lightblue
+}
+
+[href^="http://"] {
+    background: lightgreen;
+}
+/* ^= busca ou o valor exato ou o valor como sufixo, estando no começo do titulo */
+
+[href$="login"] {
+    background: darkred;
+}
+/* ^= busca ou o valor exato ou o valor como prefixo, estando no fim do titulo */
+
+[href*="prime"] {
+    background-color: blueviolet;
+}
+/* *= busca o valor exato ou o valor em qualquer parte do titulo, irrelevante de posição */

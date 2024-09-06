@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML</title>
+    <style>
+        table tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+        table tr:hover td {
+            background-color: white;
+        }
+        #Tabela-3 thead th {
+            border:dashed 1px;
+            background-color: black;
+            color: white; 
+        }
+        #Tabela-3 tfoot td {
+            background-color: lightgray;
+        }
+        #Tabela-3 tbody tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body style="background-color: lightcoral;">
+    <h1>Criando Tabelas com HTML</h1>
+    <h2>Tag table, tr, td e th</h2>
+    <table border="1" width="250" align="center" cellspacing="5" cellpadding="5" summary="Esta tabela se refere as idades da turma A da Dio.">
+        <!-- table não faz nada por sí, é usada com outras tags para formar tabelas -->
+        <!-- cellspacing é o espaço entre as células -->
+         <!-- cellpadding é o espaço entre a borda e o conteúdo da célula -->
+        <!-- summary é usado para acessibilidade, um resumo que um leitor de tela leria por exemplo, deve ser bastante detalhado -->
+        <tr>
+            <!-- tr, table row, cria linhas na tabela -->
+            <th>Nome</th>
+            <th>Idade</th>
+            <!-- th é o cabeçário na tabela, ajuda text-to-speech/leitor de tela a comunicar a estrutura da tabela -->
+        </tr>
+        <tr>
+            <td>Diogo</td>
+            <td>37</td>
+            <!-- td representa uma celula -->
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Walter</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Manoela</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Michele</td>
+            <td>26</td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h2>Tag tbody, thead e tfoot</h2>
+    <table border="1" width="250" align="center" cellspacing="5" cellpadding="5"
+        summary="Esta tabela se refere as idades da turma A da Dio.">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Diogo</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Walter</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Manoela</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Michele</td>
+            <td>26</td>
+        </tr>
+    </tbody>
+    <caption>"Tabela de idades dos alunos Dio.me"</caption>
+    <!-- caption dá um nome à tabela parente e serve como descrição, é diretamente visível ao contrário de summary que serve mais para text-to-speech  -->
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>6</td>
+        </tr>
+    </tfoot>
+    </table>
+
+    <hr>
+
+    <h2>Estilizando Tabelas</h2>
+    <table id="Tabela-3" width="250" align="center" cellspacing="5" cellpadding="5"
+        summary="Esta tabela se refere as idades da turma A da Dio.">
+        <thead>
+            <tr>
+                <th colspan="2">Minha tabela</th>
+                <!-- colspan mistura colunas para formar uma celula -->
+                 <!-- rowspan mistura linhas para formar uma celula -->
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diogo</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Walter</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Manoela</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>Michele</td>
+                <td>26</td>
+            </tr>
+        </tbody>
+        <caption>"Tabela de idades dos alunos Dio.me"</caption>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

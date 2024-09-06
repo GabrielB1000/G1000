@@ -1,0 +1,37 @@
+p, div {    
+    color: red;
+    background: lightblue;
+}
+/* afeta tags p e div */
+.texto, h1, #link-referencia {
+    color: blue;
+}
+/* afeta classe texto, tag h1 e id link-referencia */
+h1, [id^="botao"] {
+    background: lightcoral;
+}
+/* afeta a tag h1 e ids com botao como prefixo */
+p.texto {
+    color:blueviolet
+}
+/* afeta a tag p se for parte da classe texto */
+li li{
+    color:green
+}
+/* afeta a tag li dentro de outra tag li */
+#lista-01 li {
+    color: lightcoral;
+}
+/* afeta a tag li dentro da id lista-01 */
+.fundo-verde li {
+    background: lightgreen;
+}
+/* afeta a tag li dentro da classe fundo-verde */
+.fundo-azul li {
+    background: lightblue;
+}
+/* afeta a tag li dentro da classe fundo-azul */
+.fundo-verde #sublista-02 li {
+    color: black;
+}
+/* afeta a tag li dentro da id sublista-02 dentro da classe fundo-verde */

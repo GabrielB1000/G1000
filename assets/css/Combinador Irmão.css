@@ -1,0 +1,27 @@
+div + p {
+    color: tomato
+}
+/* aplica às tags p escritas imediatamente após a tag div ser fechada, sendo uma tag irmã adjacente */
+.fundo-verde + p {
+    background: pink;
+}
+/* aplica às tags irmãs adjacentes p da classe fundo-verde */
+div ~ p {
+    color: rebeccapurple;
+}
+/* aplica a todas as tags irmãs p da tag div, consideradas irmãs em geral */
+
+.fundo-verde span + p {
+    background: lightgreen;
+}
+/* vai aplicar a tag irmã adjacente p da tag span dentro da classe fundo-verde */
+
+.fundo-verde span ~ p {
+    background: lightgreen;
+}
+/* vai aplicar a todas as tags irmãs p da tag span dentro da classe fundo-verde */
+
+.fundo-verde p ~ p {
+    background: lightgreen;
+}
+/* vai aplicar para todas as tags irmãs p de outras tags p dentro da classe fundo-verde */

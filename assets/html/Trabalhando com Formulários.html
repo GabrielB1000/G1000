@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com Formulários</h1>
+    
+    <h2>Tags Form</h2>
+    <form name="signup" onsubmit="alert(' Enviei o formulário');" autocomplete="off" target="_self" method="post" action ="https://meusite.com.br/signup">
+        <!--method=get mostra as informações inseridas na url, falta segurança enquanto method=post não mostra  -->
+        <!-- target define onde o usuário irá após preencher o formulário, segue as mesmas regras usadas para hyperlinks, abrindo em novas abas ou na mesma -->
+        <!-- autocomplete define se a pagina lembra das informações inseridas pelo usuário ou se ele precisa digitar novamente caso retorne para ela -->
+        <!-- on é um termo utilizado no html que significa um evento, como on click, on blur, etc. em formulários uma variação que é muito utilizada é onsubmit -->
+        Nome: <input type="text" name="name" /><br>
+        Idade: <input type="number" name="age" /><br>
+        Senha: <input type="password" name="password" /><br>
+        <button onmouseover="alert('Envia o formulário')" type="submit">Enviar</button>
+    </form>
+
+    <hr>
+    <h2>Tag input e Seus Tipos</h2>
+    <form>
+        <label>Text: </label><input type="text" /><br>
+        <label>Number: </label><input type="number" min="0" step="5" max="99" /><br>
+        <label>Button: </label><input type="button" value="Enviar" /><br>
+        <label>Range: </label><input type="range" min="0" max="100" value="10" /><br>
+        <label>Color: </label><input type="color" /><br>
+        <label>E-mail: </label><input type="email" /><br>
+        <label>Url: </label><input type="url" /><br>
+        <!-- url requer https:// no começo -->
+        <label>Date: </label><input type="date" /><br>
+        <label>Week: </label><input type="week" /><br>
+        <label>Month: </label><input type="month" /><br>
+        <!-- week e month não são compatíveis com Firefox -->
+        <label>Checkbox: </label><input type="checkbox" /><label><input type="checkbox"></label><br><input type="checkbox"><br>
+        <label>Radio: </label><input type="radio" name="aceita" /><input type="radio" name="aceita" /><br>
+        <!-- perguntar sobre comportamento de radio se os nomes forem diferentes -->
+        <label>Hidden: </label><input type="hidden"/><br>
+        <!-- hidden se mantém invisível ao usuário, seu uso ainda vai ser explicado -->
+        <label>File: </label><input type="file" multiple /><br>
+        <!-- file normalmente só aceita 1 arquivo, multiple permite que multiplos sejam selecionados  -->
+        <label>Search: </label><input type="search" /><br>
+        <!-- search é incompatível com firefox -->
+        <label>Button: </label><input type="submit" value="Enviar" /><br>
+
+    </form>
+    
+    <hr>
+
+    <h2>Checkbox e Radio</h2>
+    <form method="post">
+        <h3>Você selecionou: Pizza de Calabresa</h3>
+        <p>Quais Opcionais você deseja?</p>
+        <input type="checkbox" disabled name="opcional[]" value="queijo"> + queijo <br>
+        <!-- disabled deixa a opção desabilitada, comunica diretamente ao usuário que está indisponível -->
+        <input type="checkbox" name="opcional[]" value="calabresa"> + calabresa <br>
+        <input type="checkbox" name="opcional[]" value="cebola"> + cebola <br>
+        <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona <br>
+        <!-- o servidor normalmente não entenderia que essas opções se selecionadas seriam uma lista, somente leria a ultima, por isso o uso de [] no final do nome, pois comunica para o servidor que é uma lista de itens e não um código sendo constantemente mudado -->
+        <!-- o method post é ideal para o uso de listas -->
+        <p>Borda recheada?</p>
+        <input type="radio" name="borda" value="sim">Sim<br>
+        <input type="radio" name="borda" value="nao">Não<br>
+        <p>Bebida</p>
+        <input type="radio" name="bebida" value="suco">Suco<br>
+        <input type="radio" name="bebida" value="refrigerante">Refrigerante<br>
+        <input type="radio" name="bebida" value="agua">Água<br>
+        <input type="radio" name="bebida" value="nenhum">Nenhum<br> <br>
+
+        <button type="Submit">Enviar pedido</button>
+        
+    </form>
+
+    <hr>
+
+    <h2>Buttons e Seus Tipos</h2>
+    <form onsubmit="" method="get">
+        <label>Nome*:</label><input type="text" name="name"><br>
+        <label>Idade*:</label><input type="number" name="age"><br>
+        <label>Password*:</label><input type="password" name="password"><br>
+
+        <button type="button" onmouseover="alert('Passei aqui')" onclick="alert('Cliquei aqui')">Clicável</button>
+        <button type="reset">Limpar</button>
+        <!-- reset limpa os campos dentro do form em que ele está incluido -->
+        <button type="submit">Enviar</button>
+        <!-- form onsubmit pode ser utilizado para interagir com submit e validar o formulário após ele ser enviado -->
+        <!-- o botão submit pode ser ativado através da tecla enter  -->
+    </form>
+    
+    <hr>
+
+    <h2>Select e Seus Tipos</h2>
+    <form onsubmit="" method="get">
+        <label>Nome:</label><input type="text" name="name"><br>
+        <label>Cargo:</label>
+        <select name="role">
+            <!-- caso queira que multiplos itens sejam selecionados, pode-se usar multiple após "role", as opções poderão então serem selecionadas com ctrl + clique -->
+            <option value="">Selecione o cargo</option>
+            <option value="administrativo">Adiministrativo</option>
+            <option selected value="gerente">Gerente</option>
+            <!-- selected é uma função boolean que deixa a opção já selecionada por padrão -->
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select>
+        <br>
+        <label>Assunto</label><input type="text" name="subject"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h3>Textarea</h3>
+    <form onsubmit="" method="get">
+        <label>Nome:</label><input type="text" name="name"><br>
+        <label>Cargo:</label>
+        <select name="role">
+            <option value="">Selecione o cargo</option>
+            <option value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option selected value="presidente">Presidente</option>
+        </select>
+        <br>
+        <label>Assunto:</label><input type="text" name="subject"><br>
+        <label>Mensagem</label>
+        <textarea rows="50" cols="50" name="message"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <hr>
+    <button>botão</button>
+    <input type="button">
+</body>
+</html>

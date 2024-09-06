@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/Fieldset.css" >
+
+</head>
+<body>
+    <h1>Estruturando seu HTML + Formatações</h1>
+
+    <h2>Formatando textos parte 1</h2>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas error, aut quaerat veritatis dolor impedit temporibus repellat, quis totam maiores recusandae? Consequatur dignissimos doloribus voluptatem aperiam, ipsum debitis eveniet possimus.
+    <blockquote><i>Programe</i> <u><b>o seu</b></u> <mark>futuro</mark> global agora!</blockquote>
+    <!-- italico é usado para citações que são termos mais regionais e gírias -->
+    <!-- strong visualmente serve o mesmo efeito que b, porém deve ser usado com a intenção de carregar mais peso e importância, text to speech por exemplo vai reconhecer a diferença -->
+    <br>10<sup>2</sup>
+    
+    <br>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus voluptatum, cumque officia quis tempora. Animi, error modi vero sed fugit nostrum cupiditate tenetur eum quas, deserunt nesciunt architecto at.
+    
+    <hr>
+
+    <h2>Formatando textos parte 2</h2>
+
+    <font color="red" face="Arial">Programe</font> o seu futuro global agora!
+    <!-- font é obsoleto, pode-se usar CSS -->
+    <!-- Arial é uma fonte ideal para livros e leitura, por ser serifada -->
+    <!-- fontes podem ser listadas como "Arial, Trebuchet MS, Tahoma" e seguem uma ordem de esquerda à direita caso haja problemas de compatibilidade -->
+
+    <hr>
+
+    <h2>Div e Span</h2>
+    <div id="links">
+        <div id="links">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <br>
+
+    <p>Dio<div>.</div>me</p>
+    <!-- div ocupa a horizontal inteira -->
+    <p>Dio<span>.</span>me</p>
+    <!-- span é útil para selecionar partes específicas de texto e código ao invés de criar um elemento inteiro na página -->
+    <!-- label funciona de maneira similar à span, porém se aplica especificamente ao campo seguinte-->
+    <hr>
+
+    <h2>Fieldsets</h2>
+    <h3>Formulário de cadastro</h3>
+    <fieldset>
+        <!-- segmenta treichos do HTML -->
+        <legend>Dados Pessoais</legend>
+        <div class="row">
+            <label>Nome</label><input type="text" />
+            <label>E-mail:</label><input type="text" />
+        </div>
+        <div class="row">
+            <label>Profissão:</label><input type="text" />
+            <label>Empresa:</label><input type="text" />
+    </fieldset>
+    </div>
+<fieldset>
+    <legend>Endereço</legend>
+    <div class="row">
+        <label>Endereço:</label><input type="text" />
+        <label>Número:</label><input style="width: 30px;" type="text" width="10" />
+    </div>
+    <div class="row">
+        <label>Bairro:</label><input type="text" />
+    </div>
+    <div class="row">
+        <label>Cidade/UF:</label><input type="text" />
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>Informações de contato</legend>
+    <div class="row">
+        <label>Celular:</label><input type="text" />
+        <label>Whatsapp:</label><input type="text" />
+    </div>
+    <div class="row">
+        <label>Linkedin:</label><input type="text" />
+        <label>Github:</label><input type="text" />
+    </div>
+</fieldset>
+
+
+    <div class="row">
+        <button type="reset">
+            Limpar
+        </button>
+        <button type="submit">
+            Enviar formulário
+        </button>
+    </div>
+
+    <hr>
+
+    <h2>Embeds</h2>
+    <h3>Embeds vs Iframes</h3>
+
+    <embed src="/assets/videos/5MnB7-rpkcLCb9eo.mp4" width="400" height="250">
+        <!-- o embed é bastante antigo, servindo como retrocompatibilidade, um dia será descontinuado -->
+         <!-- em geral é melhor usar a tag video, embed é ultrapassado e menos efetivo hoje em dia -->
+    <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam natus reprehenderit corporis et impedit laborum totam quasi! Repellat quam deleniti eaque dicta, numquam quia suscipit consectetur fuga maxime omnis maiores.</span><span>Error quasi suscipit reiciendis dolorem qui iste. Pariatur quo provident beatae delectus repellendus sed sint voluptatum aut ratione est amet tenetur at ipsa enim, voluptate placeat aliquid impedit totam nisi!</span><span>Sunt alias accusamus quis aperiam unde asperiores vel sequi eaque suscipit? Ullam maiores doloremque voluptate ut recusandae obcaecati suscipit porro facilis quibusdam consectetur blanditiis cupiditate omnis, nisi nam quos. Exercitationem.</span></p>
+        <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam natus reprehenderit corporis et impedit
+                laborum totam quasi! Repellat quam deleniti eaque dicta, numquam quia suscipit consectetur fuga maxime omnis
+                maiores.</span><span>Error quasi suscipit reiciendis dolorem qui iste. Pariatur quo provident beatae delectus
+                repellendus sed sint voluptatum aut ratione est amet tenetur at ipsa enim, voluptate placeat aliquid impedit
+                totam nisi!</span><span>Sunt alias accusamus quis aperiam unde asperiores vel sequi eaque suscipit? Ullam
+                maiores doloremque voluptate ut recusandae obcaecati suscipit porro facilis quibusdam consectetur blanditiis
+                cupiditate omnis, nisi nam quos. Exercitationem.</span></p>
+    <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam natus reprehenderit corporis et impedit
+            laborum totam quasi! Repellat quam deleniti eaque dicta, numquam quia suscipit consectetur fuga maxime omnis
+            maiores.</span><span>Error quasi suscipit reiciendis dolorem qui iste. Pariatur quo provident beatae delectus
+            repellendus sed sint voluptatum aut ratione est amet tenetur at ipsa enim, voluptate placeat aliquid impedit
+            totam nisi!</span><span>Sunt alias accusamus quis aperiam unde asperiores vel sequi eaque suscipit? Ullam
+            maiores doloremque voluptate ut recusandae obcaecati suscipit porro facilis quibusdam consectetur blanditiis
+            cupiditate omnis, nisi nam quos. Exercitationem.</span></p>
+
+<hr>
+
+    <h2>Iframes</h2>
+    <h3>Embeds vs Iframes</h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l_jaV3NJ03Q?si=F8iHBoCGgjV2iEhl"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- iframe é usado para inserir conteúdos externos, web ou projeto, na sua pagina html -->
+
+    <hr>
+
+    <h2>Resenha Sobre Cores</h2>
+    <h3>Hexadecimal</h3>
+    0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+    <br>
+    0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+    <br>
+    #RRGGBB -> #FF0000 -> 255 0 0
+</body>
+</html>

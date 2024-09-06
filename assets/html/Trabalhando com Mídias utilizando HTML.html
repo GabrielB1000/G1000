@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Mídias</title>
+</head>
+<body style="background-color: lightcoral;">
+    <h1>Trabalhando com Mídias utilizando HTML</h1>
+    <h2>Tag img</h2>
+    <!-- gifs não são mais utilizados frequentemente por sua resolução baixa, e se fosse alta seria muito mais pesádo que um vídeo -->
+        <img title=Mika alt="Descrição da gatinha da Anna leitura realizada por texto-to-speech" src="/assets/images/mika3.jpg" width="200" />
+        <!-- se definir somente a largura, a altura também comprime para não distorcer a imagem -->
+        <!-- jpg comprime porém perde resolução e muitos recursos-->
+         <!-- png é um pouco mais pesado porém tem resolução melhor e tem mais recursos, pode também ser transparente -->
+          <!-- svg é um formato vetorial, não perde resolução pois lembra os exatos pontos e cores da imagem, criando vetores entre cada para reconstruir-la, porem é limitado para imagens vetoriais, com cores mais sólidas -->
+           <!-- quando usando svg é ideal usar a tag svg, diminui o número de cheques feitos por sua página -->
+    <h2>Tag audio</h2>
+    <audio controls>
+        <!-- controls dá ao usuário controle sobre o player do audio -->
+        <!-- autoplay faz o audio tocar assim que a página carregar -->
+        <source src="/assets/audio/02. Gene's Rock A Bye.mp3" />
+        Seu navegador não tem suporte para este áudio
+    </audio>
+    
+    <h2>Tag video e tag track</h2>
+    <video width="700" controls>
+        <source src="/assets/videos/2023-11-16 23-09-26.mp4">
+        <track src="legenda.vtt" kind="captions" srclang="en" />
+        <track default src="legenda-pt-br-.vtt" kind="captions" srclang="pt-br" />
+        <!-- track aplica legendas ao vídeo, também como usar descrição de áudio, capítulos e outras funções -->
+        Seu navegador não suporta este vídeo
+        <!-- para evitar problemas de compatibilidade, pode-se colocar multiplos vídeos em formatos diferentes para que o navegador carregue um, como mp4 e webm -->
+         <!-- a desvantagem é que a página carrega dois vídeos, mesmo que só vai utilizar um -->
+    </video>
+
+    <h2>Tag iframe</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l_jaV3NJ03Q?si=10dCBAmJRoGwR8nf"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>

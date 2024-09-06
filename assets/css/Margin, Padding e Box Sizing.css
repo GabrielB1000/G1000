@@ -1,0 +1,40 @@
+#elemento-01 {
+    background: orange;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+#elemento-02 {
+    background: purple;
+    width: 300px;
+    height: 300px;
+    margin-top: 20 px;
+    margin-left: 40px;
+    margin-right: 80px;
+    /* box-sizing: content-box; */
+
+}
+/* margin determina o espaço exterior do elemento que separa ele dos outros elementos */
+
+/* PADDING */
+
+#elemento-03 {
+    background:lightblue;
+    width: 300px;
+    height: 300px;
+    margin:100px auto;
+    padding: 30px;
+    /*box-sizing: border-box; */
+}
+
+/* margin: auto calcula o espaço restante na página para centralizar o elemento */
+/* padding determina o espaço dentro do elemento que pode ser utilizado ou preenchido */
+
+/* BOX SIZING */
+
+/* width = Largura + borda + padding */
+/* height = Altura + borda + padding */
+/* padding pode aumentar o tamanho do elemento devido à esta formula */
+/* box-sizing: content-box segue estas formulas */
+/* box-sizing: border-box subtrai os pixels da altura e largura do elemento se necessário para respeitar as dimensões definidas no código */

@@ -1,0 +1,28 @@
+button {
+    background: lightblue;
+    width: 1200px;
+    height: 100px;
+}
+/* auto dá o valor que se ajusta ao conteúdo dentro do elemento, é a propriedade padrão */
+/* initial aplica a propriedade que tem como padrão em todo o CSS */
+#div-01 {
+    background: lightblue;
+    width: 200px;
+    height: 200px;
+}
+
+#div-02 {
+    background: lightgreen;
+    height: inherit;
+
+}
+/* inherit faz com que a propriedade seja herdada da tag parente, nesse caso os mesmos 200px de altura na div-01, pois div-02 está diretamente dentro dela */
+
+/* button {
+    background: pink;
+    max-width: 500px;
+    min-height: 300px;
+} */
+
+/* max e min são respectivamente o valor máximo e mínimo que o elemento pode ter */
+
